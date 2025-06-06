@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+public class movietickets {
+
+	public static void main(String[] args) {
+	Scanner scanner =new Scanner(System.in);
+	String movieName;
+	int tickets;
+	double totalAmount=0;
+	char continueBooking;
+	do {
+		System.out.println(" Enter the movie name");
+		movieName=scanner.next();
+		
+		System.out.println(" Enter the no.of tickets");
+		tickets=scanner.nextInt();
+		double ticketpereachprice=200;
+		double cost=tickets*ticketpereachprice;
+		totalAmount += cost;
+		System.out.println(" total cost for booked ticktes:"+cost);
+		System.out.println(" if you want to continue booking(y/n):");
+		continueBooking=scanner.next().charAt(0);
+		
+	}while(continueBooking=='y');
+	System.out.println("total Booking Amount "+totalAmount);
+
+	}
+
+}
