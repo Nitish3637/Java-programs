@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Atmwithdrawal {
+
+	public static void main(String[] args) {
+		Scanner Sc = new Scanner(System.in);
+		System.out.println("Enter the Account Balance:");
+		double accountBalance= Sc.nextDouble();
+		System.out.println(" Enter the WIthdrawl amount");
+		double withdrawlAmount = Sc.nextDouble();
+		if (accountBalance>withdrawlAmount)
+		{
+		accountBalance = accountBalance-withdrawlAmount;
+
+		System.out.println("Remaining balance :"+accountBalance);
+		}else {
+			System.out.println(" insufficient Balance");
+		}
+	}
+}
