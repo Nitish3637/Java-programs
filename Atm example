@@ -1,0 +1,65 @@
+mport java.util.Scanner;
+
+public class Atmexample {
+
+	public static void main(String[] args) {
+		int pinNumber=1234;
+		 double balance=10000;
+		 int choice;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the  pin:");
+		int pin =scanner.nextInt();
+		if (pin !=1234) {
+		System.out.println(" Enter the correct pin");
+		return;
+		}
+do {
+			System.out.println("     ATM MENU     ");
+			System.out.println("     1.deposit    ");
+			System.out.println("     2.withdraw    ");
+			System.out.println("     3.check balance    ");
+			System.out.println("     Exit    ");
+			System.out.println(" Enter the choice");
+			choice=scanner.nextInt();
+			switch(choice) {
+			case 1:
+				System.out.println(" Enter the deposit amount");
+				double depositAmount = scanner.nextDouble();
+				if (depositAmount<500) {
+					System.out.println("please enter more than 500");	
+				} else {
+					if (depositAmount%100!=0) {
+						System.out.println("please enter the notes like 100,200,300");
+					}else {
+						balance+=depositAmount; 
+						System.out.println("After depositing:"+balance);
+					}
+				}
+				break;
+			case 2:
+				System.out.println(" Enter the withdraw amount");
+				double withdrawAmount = scanner.nextDouble();
+				if (withdrawAmount<500) {
+					System.out.println("please enter more than 500");	
+				} else {
+					if (withdrawAmount%100!=0) {
+						System.out.println("please enter the notes like 100,200,300");
+					}else {
+						balance-=withdrawAmount; 
+						System.out.println("After withdraw:"+balance);
+					}
+				}
+				break;
+			case 3:
+				System.out.println(" Balance:"+balance);
+				break;
+			case 4:
+				System.out.println(" thank for using ATM ");
+				break;
+				default :
+				System.out.println(" please enter the correct chooice");
+			break;
+            }
+} while (choice != 4);
+	}
+}
