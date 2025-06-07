@@ -1,0 +1,32 @@
+
+public class Areacalculator {
+//static without return with paramter.
+public static void rectangleArea(double length,double width) {
+	double area=length*width;
+	System.out.println("Area of rectangle :"+area);
+}
+public double circleArea() {
+	double radius=18;
+	double area=3.146*radius*radius;
+	return area;
+}
+public static void squareArea(double side) {
+	double area=side*side;
+	System.out.println("area oof square:"+area);
+	
+}
+public  static double triangleArea(double base,double height) {
+	double area=0.5*base*height;
+	return area;
+}
+	public static void main(String[] args) {
+		rectangleArea(5,10);
+		Areacalculator ac=new Areacalculator();
+	System.out.println("area of circle "+ac.circleArea());
+	squareArea(5);
+	System.out.println("Area of triangle:"+ac.triangleArea(10, 5));
+	
+
+	}
+
+}
