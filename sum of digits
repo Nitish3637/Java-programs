@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Sumofdigits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the Number");
+		int inputNumber=scanner.nextInt();
+		int digitSum=0;
+		while(inputNumber>0){
+			int lastDigit=inputNumber%10;
+			
+			digitSum+=lastDigit;
+			inputNumber/=10;
+			
+		}
+		System.out.println(digitSum);
+		
+
+	}
+
+}
